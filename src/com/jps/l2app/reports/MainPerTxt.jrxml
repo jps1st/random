@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="180" pageHeight="842" columnWidth="139" leftMargin="21" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20e4fd75-0829-42fe-9c04-d13cd0d24b12">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="draw" class="java.lang.String"/>
+	<field name="raffle" class="java.lang.String"/>
+	<field name="digit" class="java.lang.String"/>
+	<field name="detail" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="gross" class="java.lang.String"/>
+	<field name="header" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="16" height="15" uuid="48c10723-51e8-4ad1-8757-ed29f482cf1b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="14" width="25" height="15" uuid="e8a529ab-a657-4e1f-a168-682c26cf5be9"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="14" width="37" height="15" uuid="c3122e44-b1bd-4429-a275-8a384808456f"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIGIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="14" width="49" height="15" uuid="aa4fd29a-acbb-4eeb-ae18-0032cf48eab6"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="124" height="20" uuid="8a275a35-536a-4509-b168-1bb41c92b8dd"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{header}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="16" height="11" uuid="b4e0ee21-9921-4cfe-a047-30b849e29bee"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{draw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="0" width="25" height="11" uuid="dbaafbc4-07cf-4970-8d56-6fe6d8efc931"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raffle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="0" width="37" height="11" uuid="378c1c1e-a6a3-4206-a45d-c922d0bff144"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{digit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="49" height="11" uuid="bd0eabd0-b0e2-4f4b-8d7f-8b6e6fad8e43"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="2" width="124" height="16" uuid="acb763bd-edf6-4c66-89e3-5251be66325f"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GROSS = " + $F{gross}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

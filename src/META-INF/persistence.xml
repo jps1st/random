@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="l2appPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.jps.l2app.entities.Administrator</class>
+    <class>com.jps.l2app.entities.RawSMS</class>
+    <class>com.jps.l2app.entities.Submission</class>
+    <class>com.jps.l2app.entities.QueuedResponse</class>
+    <class>com.jps.l2app.entities.EmployeeLimit</class>
+    <class>com.jps.l2app.entities.GlobalLimit</class>
+    <class>com.jps.l2app.entities.Settings</class>
+    <class>com.jps.l2app.entities.SubmissionRaw</class>
+    <class>com.jps.l2app.entities.EmployeeTotals</class>
+    <class>com.jps.l2app.entities.BetLimit</class>
+    <class>com.jps.l2app.entities.ProntonTransaction</class>
+    <class>com.jps.l2app.entities.ProntonTransactionDetail</class>
+    <class>com.jps.l2app.entities.RaffleWin</class>
+    <class>com.jps.l2app.entities.ForwardFinancer</class>
+    <class>com.jps.l2app.entities.DigitTotal</class>
+    <class>com.jps.l2app.entities.StationGroup</class>
+    <class>com.jps.l2app.entities.Employee</class>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create-or-extend-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>

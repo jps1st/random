@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="216" pageHeight="720" columnWidth="188" leftMargin="21" rightMargin="7" topMargin="7" bottomMargin="7" uuid="4fb9e3cc-0c06-48f0-978a-9774999a2d5d">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="8"/>
+	<field name="draw" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="raf" class="java.lang.String"/>
+	<field name="num" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="trans" class="java.lang.String"/>
+	<field name="station" class="java.lang.String"/>
+	<field name="win" class="java.lang.String"/>
+	<field name="cname" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="19" width="76" height="15" uuid="a8817d6c-82b5-41c6-be6d-7465eae232b3"/>
+				<textElement>
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Draw: " + $F{draw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="19" width="117" height="15" uuid="7b261119-0b4b-45aa-89d0-1b4251fed3f1"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="fb9fb59b-6237-400a-9612-c8bfb6c2dd85"/>
+				<textElement markup="none">
+					<font fontName="Meiryo" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="76" y="0" width="97" height="20" uuid="512fd3d5-ecd5-43c6-b00d-f4e44965322b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{station}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="98328d5a-d752-4711-a9f5-759aa3a726be"/>
+				<textElement>
+					<font fontName="Meiryo" size="7"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="0" width="41" height="20" uuid="e29c42c2-1fe0-4ede-9f8d-a6e08cc13d6d"/>
+				<textElement>
+					<font fontName="Meiryo" size="7"/>
+				</textElement>
+				<text><![CDATA[NUM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="0" width="37" height="20" uuid="7b797c56-0733-4d6a-abab-cb51fd65162b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="7"/>
+				</textElement>
+				<text><![CDATA[AMT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="0" width="46" height="20" uuid="aa737fcc-4442-4e02-a98c-f8807ced9fda"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="7"/>
+				</textElement>
+				<text><![CDATA[WIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="16" height="20" uuid="fba94ecf-beaa-4639-bf45-d19a02b8fe58"/>
+				<textElement>
+					<font fontName="Meiryo" size="7"/>
+				</textElement>
+				<text><![CDATA[RAF]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="30" height="12" uuid="e2dc7d50-19b6-4e0d-9830-161d00fdbdbe"/>
+				<textElement>
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="47" y="0" width="41" height="12" uuid="c4e06055-38c5-4c4a-8c72-829140361eef"/>
+				<textElement>
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="89" y="0" width="37" height="12" uuid="c620512d-778c-4af6-8b37-f17594f67cd5"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="127" y="0" width="46" height="12" uuid="3893057f-2e68-49bd-9c86-45a91239b34b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{win}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="30" y="0" width="16" height="12" uuid="3394ce60-84ea-4d6f-9d5b-f960aa33bc22"/>
+				<textElement>
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{raf}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="6" width="74" height="20" uuid="736ce15e-8b0f-4bd0-8446-303db944b02b"/>
+				<textElement>
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Total: " +$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="6" width="72" height="20" uuid="7ab45629-a23a-4464-8e7e-7aaa173f683c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{trans}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd-MMM-yyyy hh:mm:ss aa">
+				<reportElement x="0" y="22" width="173" height="20" uuid="aa97402e-3d57-4d99-b057-0bfb8285ab41"/>
+				<textElement textAlignment="Center">
+					<font fontName="Meiryo" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

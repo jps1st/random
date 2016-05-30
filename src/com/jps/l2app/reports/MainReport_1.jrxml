@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20e4fd75-0829-42fe-9c04-d13cd0d24b12">
+	<property name="ireport.zoom" value="1.3310000000000008"/>
+	<property name="ireport.x" value="45"/>
+	<property name="ireport.y" value="0"/>
+	<field name="draw" class="java.lang.String"/>
+	<field name="raffle" class="java.lang.String"/>
+	<field name="digit" class="java.lang.String"/>
+	<field name="detail" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="gross" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="43" height="20" uuid="48c10723-51e8-4ad1-8757-ed29f482cf1b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DRAW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="0" width="53" height="20" uuid="e8a529ab-a657-4e1f-a168-682c26cf5be9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAFFLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="0" width="62" height="20" uuid="c3122e44-b1bd-4429-a275-8a384808456f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIGIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="0" width="335" height="20" uuid="287a8ac6-c82e-4494-ae75-44c2d0000bc2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="503" y="0" width="49" height="20" uuid="aa4fd29a-acbb-4eeb-ae18-0032cf48eab6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="16" width="555" height="1" uuid="db6d82cc-5368-4561-abe2-26d7a72e3fcd"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="43" height="16" uuid="b4e0ee21-9921-4cfe-a047-30b849e29bee"/>
+				<textFieldExpression><![CDATA[$F{draw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="0" width="53" height="16" uuid="dbaafbc4-07cf-4970-8d56-6fe6d8efc931"/>
+				<textFieldExpression><![CDATA[$F{raffle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="0" width="62" height="16" uuid="378c1c1e-a6a3-4206-a45d-c922d0bff144"/>
+				<textFieldExpression><![CDATA[$F{digit}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="167" y="0" width="335" height="16" uuid="df420150-04e9-4bc2-bea3-73c16153e539"/>
+				<textFieldExpression><![CDATA[$F{detail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="49" height="16" uuid="bd0eabd0-b0e2-4f4b-8d7f-8b6e6fad8e43"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="386" y="2" width="166" height="16" uuid="acb763bd-edf6-4c66-89e3-5251be66325f"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GRAND TOTAL = " + $F{gross}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
